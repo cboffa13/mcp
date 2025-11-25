@@ -6,19 +6,16 @@ https://oss.oracle.com/licenses/upl.
 
 """oracle oci-{{cookiecutter.project_domain}} MCP Server implementation."""
 
-from loguru import logger
+from logging import Logger
 from mcp.server.fastmcp import FastMCP
 from typing import Literal
 
 
-mcp = FastMCP(
-    "oracle.oci-{{cookiecutter.project_domain | lower | replace(' ', '-') | replace('_', '-')}}-mcp-server",
-    instructions='{{cookiecutter.instructions | replace('\'', '\'\'')}}',
-    dependencies=[
-        'pydantic',
-        'loguru',
-    ],
-)
+from . import __project__, __version__
+
+logger = Logger(__name__, level="INFO")
+
+mcp = FastMCP(name=__project__, instructions='{{cookiecutter.instructions | replace('\'', '\'\'')}}')
 
 
 @mcp.tool(name='ExampleTool')

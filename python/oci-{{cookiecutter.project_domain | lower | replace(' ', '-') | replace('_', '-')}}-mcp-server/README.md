@@ -13,5 +13,4 @@
 * [ ] Add your own tool(s)
 * [ ] Keep test coverage at or above the `main` branch
 * [ ] Document the MCP Server in this "README.md"
-* [ ] Add a section for this oci-{{cookiecutter.project_domain}} MCP Server at the top level of this repository "../../README.md"
 * [ ] Submit a PR and pass all the checks

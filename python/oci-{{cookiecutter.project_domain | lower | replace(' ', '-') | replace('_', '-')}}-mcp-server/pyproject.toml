@@ -24,7 +24,7 @@ classifiers = [
 ]
 
 [project.scripts]
-"oracle.oci-{{cookiecutter.project_domain | lower | replace(' ', '-') | replace('_', '-')}}-mcp-server" = "oracle.oci-{{cookiecutter.project_domain | lower | replace(' ', '-') | replace('_', '-') | replace('-', '_')}}_mcp_server.server:main"
+"oracle.oci-{{cookiecutter.project_domain | lower | replace(' ', '-') | replace('_', '-')}}-mcp-server" = "oracle.oci_{{cookiecutter.project_domain | lower | replace(' ', '_') | replace('-', '_')}}_mcp_server.server:main"
 
 [dependency-groups]
 dev = [
@@ -37,8 +37,8 @@ dev = [
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.hatch.metadata]
-allow-direct-references = true
+[tool.hatch.build.targets.wheel]
+packages = ["oracle"]
 
 [tool.coverage.run]
 omit = [

@@ -5,6 +5,7 @@ https://oss.oracle.com/licenses/upl.
 """
 
 from logging import Logger
+import os
 
 from fastmcp import FastMCP
 from oracle.oci_monitoring_mcp_server.alarms.tools import MonitoringAlarmTools

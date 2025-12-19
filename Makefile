@@ -1,4 +1,4 @@
-SUBDIRS := $(filter-out src/dbtools-mcp-server src/mysql-mcp-server src/oci-pricing-mcp-server src/oracle-db-doc-mcp-server,$(wildcard src/*))
+SUBDIRS := $(filter-out src/dbtools-mcp-server src/mysql-mcp-server src/oci-pricing-mcp-server src/oracle-db-doc-mcp-server,$(wildcard src/oci-monitoring-mcp-server))
 
 .PHONY: test format
 

@@ -53,7 +53,6 @@ PredicateType = Literal[
     "outside",
     "absent",
 ]
-
 # Reusable Fields across tools
 
 CompartmentField = Field(
